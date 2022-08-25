@@ -1,0 +1,75 @@
+.card {
+    border: 1px solid #D58C51;
+    align-items: center;
+}
+.card:hover{
+    color: #D58C51;
+}
+
+.card__preview {
+    display: block;
+    margin: 43px auto 30px auto;
+
+}
+
+.card__decription {
+    padding: 0px 30px 0px 21px;
+    height: 126px;
+    margin: 0px 0px 26px 0px;
+   
+}
+
+.card__title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    
+
+}
+.card__text-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    margin: 10px 0px 0px 0px;
+    
+
+
+}
+
+
+.card__order {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 30px 32px 21px;
+}
+
+
+.order-card__value {
+    display: flex;
+    align-items: flex-end;
+}
+
+.order-card__price {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+}
+.order-card__weight {
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0px 0px 0px 7px;
+}
+
+.order-card__img:hover{
+    fill: #D58C51;
+}
+.order-card__img circle {
+    stroke: white;
+}
+.order-card__img circle:hover{
+    stroke: #D58C51;
+}
