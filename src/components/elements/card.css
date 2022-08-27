@@ -63,13 +63,15 @@
     line-height: 17px;
     margin: 0px 0px 0px 7px;
 }
+.order-card__btn {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
 
-.order-card__img:hover{
-    fill: #D58C51;
+.order-card__btn:hover{
+    background-color:#D58C51;
+    border: none;
 }
-.order-card__img circle {
-    stroke: white;
-}
-.order-card__img circle:hover{
-    stroke: #D58C51;
-}
+

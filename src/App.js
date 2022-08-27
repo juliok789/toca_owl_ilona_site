@@ -1,6 +1,7 @@
 import './App.css';
 
 import Card from './components/elements/cards';
+import {products} from './products'
 
 
 
@@ -27,64 +28,20 @@ function App() {
         </header>
 
         <div className="menu">
-        <Card 
-          url={'images/1.png'}
-          title={'Устрицы по-рокфеллеровски'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-          price={'2 700 ₽'}
-          weight ={'/ 500 г.'}
-          />
-          
-          <Card 
-          url={'images/2.png'}
-          title={'Свиные ребрышки на гриле с зеленью'}
-          description= {'Не следует, однако забывать, что реализация намеченных плановых'}
-          price={'1 600 ₽'}
-          weight={'/ 750 г.'}
-          />
+        {products.map(key => {
+          const{img, name, description, price, weight} = key
 
-        <Card 
-          url={'images/3.png'}
-          title={'Креветки по-королевски в лимонном соке'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу'}
-          price={'1 820 ₽'}
-          weight={'/ 7 шт.'}
+          return (
+            <Card
+            img={img}
+            title={name}
+            description={description}
+            price={price}
+            weight={weight}
           />
-        <Card 
-          url={'images/1.png'}
-          title={'Устрицы по-рокфеллеровски'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-          price={'2 700 ₽'}
-          weight ={'/ 500 г.'}
-          />
-      <Card 
-          url={'images/1.png'}
-          title={'Устрицы по-рокфеллеровски'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-          price={'2 700 ₽'}
-          weight ={'/ 500 г.'}
-          />
-        <Card 
-          url={'images/2.png'}
-          title={'Свиные ребрышки на гриле с зеленью'}
-          description={'Не следует, однако забывать, что реализация намеченных плановых'}
-          price={'1 600 ₽'}
-          weight={'/ 750 г.'}
-          />
-        <Card 
-          url={'images/3.png'}
-          title={'Креветки по-королевски в лимонном соке'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу'}
-          price={'1 820 ₽'}
-          weight={'/ 7 шт.'}
-          />
-     <Card 
-          url={'images/1.png'}
-          title={'Устрицы по-рокфеллеровски'}
-          description={'Значимость этих проблем настолько очевидна, что укрепление и развитие структуры'}
-          price={'2 700 ₽'}
-          weight ={'/ 500 г.'}
-          />
+          )
+          })
+  }
         </div>
         
       </div>
