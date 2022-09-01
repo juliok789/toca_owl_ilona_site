@@ -16,6 +16,7 @@ function Card ({img,title, description, price, weight}) {
                 <div className="order-card__weight">{weight}</div>
                 </div>
                <button className="order-card__btn">+</button>
+               <button className="order-card__btn-basket">x</button>
             </div>
         </div>
     );

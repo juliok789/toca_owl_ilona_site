@@ -56,3 +56,6 @@
 .card {
   width: 312px
 }
+.order-card__btn-basket {
+  display: none;
+}
