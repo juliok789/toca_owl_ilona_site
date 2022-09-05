@@ -38,8 +38,12 @@
   text-align: right;
   margin: 0px 20px 0px 0px;
 }
-.basket-header__img {
-  display: block;
+.basket-header__btn {
+  border-radius: 50%;
+  background-color: #D58C51;
+  width: 50px;
+  height: 50px;
+  
 }
 
 
@@ -53,6 +57,10 @@
   padding: 0px 0px 67px 0px;
 
 }
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
 .card {
   width: 312px
 }

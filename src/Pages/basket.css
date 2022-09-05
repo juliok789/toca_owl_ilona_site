@@ -24,6 +24,7 @@
     border: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0px 0px 35px 0px;
 
 }
@@ -38,7 +39,7 @@
 }
 .card__title {
     width: 310px;
-    margin: 0px 216px 0px 0px;
+    margin: 0px 200px 0px 0px;
 }
 .order-card__price {
     margin: 0px 20px 0px 0px;
@@ -47,8 +48,17 @@
 }
 
 .order-card__btn {
+    border: 1px solid #D58C51;
+    color: #D58C51;
+    transform: rotate(45deg);
+}
+.order-card__btn::hover {
     display: none;
 }
+
+/* .order-card__btn {
+    display: none;
+} */
 
 .basket__footer {
     border-top: 1px solid #D58C51;

@@ -1,4 +1,7 @@
+
 import './card.css'
+
+
 
 
 function Card ({img,title, description, price, weight}) {
@@ -15,11 +18,12 @@ function Card ({img,title, description, price, weight}) {
                 <div className="order-card__price">{price}</div>
                 <div className="order-card__weight">{weight}</div>
                 </div>
-               <button className="order-card__btn">+</button>
-               <button className="order-card__btn-basket">x</button>
+                <button className="order-card__btn">+</button>
             </div>
         </div>
     );
+    
+    
 };
 
 export default Card;
