@@ -1,13 +1,20 @@
 
-// import Basket from './Pages/Basket';
-import Products from './Pages/Products';
+import Products from './Pages/Products'
+import Basket from './Pages/Basket'
 
+import { Routes, Route} from 'react-router-dom'
 
 function App() {
+
   return (
-    <Products/>
-    // <Basket/>
-    
+
+    <Routes>
+      <Route path='/' element={<Products/>}/>
+      <Route path='/Basket' element={<Basket/>}/>
+      
+      
+    </Routes>
+  
   );
 }
 

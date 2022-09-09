@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900');
+
+
+
+
+.basket {
+    background-color: #161516;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+
+    &__container {
+        width: 1000px;
+        margin: 0px auto;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 80px 0px;
+        padding: 56px 0px 0px 0px;
+
+    }
+        
+
+    &__header-title {
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 38px;
+        text-transform: uppercase;
+        margin: 0px auto;
+        
+    }
+    
+    &__body {
+        height: calc(100vh - 118px);
+        overflow-x: auto;
+        padding: 0px 0px 100px 0px;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+    }
+    &__footer {
+        border-top: 1px solid #D58C51;
+        
+    }
+    &__footer-content {
+        padding: 20px 0px 27px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__footer-btn {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #131313;
+        background: #D58C51;
+        height: 42px;
+        width: 200px;
+    }
+    
+    
+    
+}
+.total {
+    display: flex;
+    
+    &__title {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 26px;
+        text-transform: uppercase;
+        margin: 0px 16px 0px 0px;
+    }
+    &__sum {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #D58C51;
+        &::after {
+            content: '\20BD';
+        }
+    }
+}
+

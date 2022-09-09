@@ -1,0 +1,50 @@
+.basket-card {
+    border: none;
+    align-items: center;
+    display: flex;
+    vertical-align: middle;
+    margin: 0px 0px 35px 0px;
+    
+
+    &__preview {
+        display: block;
+        
+    }
+
+    &__description-title {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        width: 310px;
+        margin: 0px 216px 0px 88px;
+        
+
+    }
+
+
+
+    &__price {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        margin: 0px 15px 0px 0px;
+        color:#D58C51;
+        &::after {
+            content: '\20BD';
+        }
+    }
+    &__btn {
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid #D58C51;
+        color: #D58C51;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        transform: rotate(45deg);
+    }
+    }
+
+
+
+    

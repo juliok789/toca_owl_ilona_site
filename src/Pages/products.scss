@@ -5,6 +5,7 @@
   background-color: #161516;
   color: #FFFFFF;
   font-family: 'Montserrat';
+  
 }
 
 .header__title {
@@ -24,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 54px 0px 0px 0px;
+  
 }
 .header__basket {
   display: flex;
@@ -37,6 +39,9 @@
   display: inline-block;
   text-align: right;
   margin: 0px 20px 0px 0px;
+  &::after {
+    content: '\20BD';
+}
 }
 .basket-header__btn {
   border-radius: 50%;
@@ -56,14 +61,11 @@
   overflow-x: auto;
   padding: 0px 0px 67px 0px;
 
-}
+  }
+
 .menu::-webkit-scrollbar {
   display: none;
 }
 
-.card {
-  width: 312px
-}
-.order-card__btn-basket {
-  display: none;
-}
+
+

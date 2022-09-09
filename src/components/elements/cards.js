@@ -1,24 +1,24 @@
 
-import './card.css'
+import './card.scss'
 
 
 
 
-function Card ({img,title, description, price, weight}) {
+function Card ({id,img,title, description, price, weight, handleClick}) {
     return (
         <div className="card">
             <img className="card__preview"src={img} alt="" />
             <div className="card__decription">
-                <h2 className="card__title">{title}</h2>
-                <p className="card__text-desc">{description}</p>
+                <h2 className="card__description-title">{title}</h2>
+                <p className="card__description-text">{description}</p>
             </div>
             
-            <div className="card__order order-card">
-                <div className="order-card__value">
-                <div className="order-card__price">{price}</div>
-                <div className="order-card__weight">{weight}</div>
+            <div className="card__info">
+                <div className="card__info-desc card-info">
+                    <div className="card-info__price">{price}</div>
+                    <div className="card-info__weight">{weight}</div>
                 </div>
-                <button className="order-card__btn">+</button>
+                <button onClick={handleClick} className="card__info-btn btn">+</button>
             </div>
         </div>
     );
