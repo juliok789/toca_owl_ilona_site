@@ -1,10 +1,20 @@
-// import Card from "../components/elements/cards";
-
 import BasketCard from "../components/elements/basketcards"
-import {products} from '../products';
 import './basket.scss';
 import {Link} from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { deleteProduct } from '../store/reducers/basket'
+
+
+
 function Basket() {
+  const dispatch = useDispatch ()
+
+  const handledelProduct = (id) => {dispatch(deleteProduct({id:id}))}
+
+
+  const basket = useSelector(state=>state.basket.basket)
+ 
+
     return (
       <div className="basket">
         <div className="basket__container">
@@ -15,16 +25,15 @@ function Basket() {
             <h1 className="basket__header-title">Корзина с выбранными товарами</h1>
           </header>
           <div className="basket__body">
-            {products.slice(0,3).map(key => {
-            const{img, name,  price} = key
-            return (
-              <BasketCard
-              img={img}
-              title={name}
-              price={price}
+            {basket.map(item => <BasketCard
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              price={item.price}
+
+              handledelProduct={()=>handledelProduct(item.id)}
             />
-            )
-            })}
+            )}
           </div>      
         </div>
         <footer className="basket__footer">

@@ -1,7 +1,6 @@
 
 import Products from './Pages/Products'
 import Basket from './Pages/Basket'
-
 import { Routes, Route} from 'react-router-dom'
 
 function App() {

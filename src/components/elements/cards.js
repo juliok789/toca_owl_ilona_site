@@ -1,10 +1,24 @@
 
 import './card.scss'
+import { useDispatch } from 'react-redux'
+import { addProducts } from '../../store/reducers/basket';
+import { v4 as uuidv4 } from 'uuid'
 
 
 
 
-function Card ({id,img,title, description, price, weight, handleClick}) {
+function Card ({id,img,title, description, price, weight}) {
+
+    const dispatch = useDispatch ()
+
+    let item = {
+        id: uuidv4 (),
+        title: title,
+        img: img,
+        price: price
+    }
+
+    const handleaddProducts = () => dispatch (addProducts (item))
     return (
         <div className="card">
             <img className="card__preview"src={img} alt="" />
@@ -18,7 +32,7 @@ function Card ({id,img,title, description, price, weight, handleClick}) {
                     <div className="card-info__price">{price}</div>
                     <div className="card-info__weight">{weight}</div>
                 </div>
-                <button onClick={handleClick} className="card__info-btn btn">+</button>
+                <button onClick={handleaddProducts} className="card__info-btn btn">+</button>
             </div>
         </div>
     );
