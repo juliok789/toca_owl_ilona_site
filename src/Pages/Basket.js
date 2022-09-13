@@ -2,8 +2,7 @@ import BasketCard from "../components/elements/basketcards"
 import './basket.scss';
 import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { deleteProduct } from '../store/reducers/basket'
-
+import { deleteProduct } from '../store/reducers/basketSlice'
 
 
 function Basket() {
@@ -11,9 +10,9 @@ function Basket() {
 
   const handledelProduct = (id) => {dispatch(deleteProduct({id:id}))}
 
-
   const basket = useSelector(state=>state.basket.basket)
- 
+
+  const totalPrice = useSelector(state=>state.basket.totalPrice)
 
     return (
       <div className="basket">
@@ -41,7 +40,7 @@ function Basket() {
             <div className="basket__footer-content">
             <div className="basket__footer-total total">
               <div className="total__title">Заказ на сумму:</div>
-              <div className="total__sum">6 220</div>
+              <div className="total__sum">{totalPrice}</div>
             </div>
             <button className="basket__footer-btn">Оформить заказ</button>
             </div> 

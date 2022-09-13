@@ -1,24 +1,22 @@
 
 import './card.scss'
-import { useDispatch } from 'react-redux'
-import { addProducts } from '../../store/reducers/basket';
-import { v4 as uuidv4 } from 'uuid'
+import {useDispatch} from 'react-redux'
+import {addProducts} from '../../store/reducers/basketSlice'
+import {v4 as uuidv4} from 'uuid'
 
 
-
-
-function Card ({id,img,title, description, price, weight}) {
-
+function Card ({img,title, description, price, weight}) {
     const dispatch = useDispatch ()
+    const handleaddProducts = () => {
+        let item = {
+            id: uuidv4 (),
+            img:img,
+            title:title,
+            price:price
+        }
 
-    let item = {
-        id: uuidv4 (),
-        title: title,
-        img: img,
-        price: price
-    }
+    dispatch (addProducts (item))}
 
-    const handleaddProducts = () => dispatch (addProducts (item))
     return (
         <div className="card">
             <img className="card__preview"src={img} alt="" />

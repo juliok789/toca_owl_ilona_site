@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import basketReducer from './reducers/basket'
+import basketReducer from './reducers/basketSlice'
 
 export default configureStore({
     reducer: {
