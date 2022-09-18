@@ -1,7 +1,7 @@
 
 import Products from './Pages/Products'
 import Cart from './Pages/Cart'
-import ProductPage from './Pages/ProductPage'
+import SingleProductPage from './Pages/SingleProductPage'
 
 
 import { Routes, Route} from 'react-router-dom'
@@ -13,7 +13,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<Products/>}/>
-      <Route path='/:id' element={<ProductPage/>}/>
+      <Route path='/:id' element={<SingleProductPage/>}/>
       <Route path='/Cart' element={<Cart/>}/>
       
       

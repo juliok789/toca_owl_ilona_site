@@ -1,19 +1,11 @@
 
 import { useSelector} from 'react-redux'
 import {useNavigate, Link, useParams} from 'react-router-dom'
-import './productpage.scss'
+import './singleProductPage.scss'
 import ProductItem from '../components/elements/ProductItem'
 import {products} from '../products'
 
-
-
-
-
-function ProductPage() {
-  const params = useParams () 
-  const id = params.id
-  let item = products.find((item)=>item.id === id)
-  
+function SingleProductPage() {
   
   const navigate = useNavigate ()
   const cart = useSelector((state) => state.cart.cart)
@@ -26,15 +18,15 @@ function ProductPage() {
     })
     return {totalPrice, totalQuantity}
   }
-
+  const params = useParams () 
+  const id = params.id
+  let item = products.find((item)=>item.id === id)
   
     return (
       <main className="product">
         <div className="container">
-          <header className='product__header header'>
-            
+          <header className='product__header header'> 
             <img onClick = {()=>navigate(-1)} src='images/arrow.svg' alt=''/>
-            
             <div className="header__basket basket-header">
               <p className="basket-header__desc"><span>{getTotal().totalQuantity} товара</span><br/>на сумму {getTotal().totalPrice}  </p> 
               <Link to='/Cart'>
@@ -43,8 +35,6 @@ function ProductPage() {
             </div>
           </header>
           <div className="product__body">
-          
-       
             <ProductItem
               id={item.id}
               key={item.id}
@@ -54,12 +44,10 @@ function ProductPage() {
               price={item.price}
               weight={item.weight}
             />
-
-           
           </div>
         </div>
       </main>
     );
   }
   
-  export default ProductPage;
+  export default SingleProductPage;
