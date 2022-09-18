@@ -4,7 +4,6 @@ import {useDispatch} from 'react-redux'
 import {addToCart} from '../../store/reducers/CartSlice'
 import { useNavigate } from 'react-router-dom'
 
-import { Link} from 'react-router-dom'
 
 function Card ({id,img,title, description, price, weight}) {
     const dispatch = useDispatch()
@@ -15,7 +14,7 @@ function Card ({id,img,title, description, price, weight}) {
         <div  className="card" >
             
             <img onClick={() => navigate('/'+id) } className="card__preview"src={img} alt="" />
-            <div className="card__decription">
+            <div onClick={() => navigate('/'+id) } className="card__decription">
                 <h2 className="card__description-title">{title}</h2>
                 <p className="card__description-text">{description}</p>
             </div>
@@ -33,10 +32,7 @@ function Card ({id,img,title, description, price, weight}) {
                 }className="card__info-btn">+</button>
             </div>
         </div>
-        
     );
-    
-    
 };
 
 export default Card;

@@ -1,14 +1,19 @@
 
 import { useSelector} from 'react-redux'
-import {useNavigate, Link} from 'react-router-dom'
+import {useNavigate, Link, useParams} from 'react-router-dom'
 import './productpage.scss'
 import ProductItem from '../components/elements/ProductItem'
+import {products} from '../products'
+
 
 
 
 
 function ProductPage() {
- 
+  const params = useParams () 
+  const id = params.id
+  let item = products.find((item)=>item.id === id)
+  
   
   const navigate = useNavigate ()
   const cart = useSelector((state) => state.cart.cart)
@@ -38,11 +43,19 @@ function ProductPage() {
             </div>
           </header>
           <div className="product__body">
-            
+          
+       
             <ProductItem
-         
+              id={item.id}
+              key={item.id}
+              img={item.img}
+              title={item.name}
+              description={item.description}
+              price={item.price}
+              weight={item.weight}
             />
-            
+
+           
           </div>
         </div>
       </main>
