@@ -1,8 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import basketReducer from './reducers/basketSlice'
+import { cartReducer } from "./reducers/CartSlice.js";
 
 export default configureStore({
-    reducer: {
-        basket: basketReducer
-    }
+  reducer: {cart:cartReducer
+  }
 })

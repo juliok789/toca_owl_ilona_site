@@ -1,18 +1,26 @@
-import BasketCard from "../components/elements/basketcards"
-import './basket.scss';
+import CartItem from '../components/elements/CartItem'
+import './cart.scss';
 import {Link} from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { deleteProduct } from '../store/reducers/basketSlice'
+import { useSelector} from 'react-redux'
 
 
-function Basket() {
-  const dispatch = useDispatch ()
 
-  const handledelProduct = (id) => {dispatch(deleteProduct({id:id}))}
+function Cart () {
 
-  const basket = useSelector(state=>state.basket.basket)
+  const cart = useSelector((state) => state.cart.cart)
+  const getTotal = () => {
 
-  const totalPrice = useSelector(state=>state.basket.totalPrice)
+    let totalPrice = 0
+    cart.forEach(item => {
+
+      totalPrice += item.price * item.quantity
+    })
+    return {totalPrice}
+  }
+
+
+
+
 
     return (
       <div className="basket">
@@ -24,15 +32,16 @@ function Basket() {
             <h1 className="basket__header-title">Корзина с выбранными товарами</h1>
           </header>
           <div className="basket__body">
-            {basket.map(item => <BasketCard
+          {cart?.map((item) => (
+            <CartItem
               key={item.id}
+              id={item.id}
               img={item.img}
               title={item.title}
-              price={item.price}
-
-              handledelProduct={()=>handledelProduct(item.id)}
+              price={item.price} 
+          
             />
-            )}
+    ))}
           </div>      
         </div>
         <footer className="basket__footer">
@@ -40,7 +49,7 @@ function Basket() {
             <div className="basket__footer-content">
             <div className="basket__footer-total total">
               <div className="total__title">Заказ на сумму:</div>
-              <div className="total__sum">{totalPrice}</div>
+              <div className="total__sum">{getTotal().totalPrice}</div>
             </div>
             <button className="basket__footer-btn">Оформить заказ</button>
             </div> 
@@ -49,5 +58,5 @@ function Basket() {
       </div>
     );
   } 
-  export default Basket;
+  export default Cart;
   

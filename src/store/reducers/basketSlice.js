@@ -34,14 +34,16 @@ reducers: {
         state.quantity = state.basket.reduce((sum) => {
                 return sum + 1},0)
       },
-        
+ 
+
+    
+    
     }
 })
 
 
 export const { 
     addProducts, 
-    
     deleteProduct 
 } = basketSlice.actions
 

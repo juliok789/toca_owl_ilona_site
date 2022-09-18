@@ -6,6 +6,7 @@
   color: #FFFFFF;
   font-family: 'Montserrat';
   
+  
 }
 
 .header__title {
@@ -20,12 +21,17 @@
 }
 
 .header {
-  margin: 0px 0px 80px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 54px 0px 0px 0px;
-  position: sticky;
+  padding: 54px 0px 80px 0px;
+  position:sticky;
+  top: 0;
+  background-color: #161516;
+  
+
+
+ 
   
 }
 .header__basket {
@@ -61,6 +67,7 @@
   height: calc(100vh - 118px);
   overflow-x: auto;
   padding: 0px 0px 67px 0px;
+  
 
   }
 

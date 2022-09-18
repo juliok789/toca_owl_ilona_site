@@ -1,0 +1,14 @@
+.product {
+    background-color: #161516;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    &__header {
+
+    }
+    &__body {
+        height: calc(100vh - 100px);
+        
+
+    }
+
+}
