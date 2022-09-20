@@ -1,0 +1,31 @@
+.footer-wrap {
+    border-top: #D58C51 1px solid;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    padding: 28px 0px 35px 0px; 
+ 
+}
+
+.cart-total {
+    display: flex;
+    align-items: center;
+    
+    &__text {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 26px;
+        text-transform: uppercase;
+       
+    }
+    &__amount{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #D58C51;
+    }
+}
+

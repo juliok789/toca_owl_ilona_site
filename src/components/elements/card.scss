@@ -1,20 +1,25 @@
 .card {
     border: 1px solid #D58C51;
     align-items: center;
-    width: 312px;
+    width: 20%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 43px 30px 32px 21px;
     cursor: pointer;
     &:hover{
         color: #D58C51;
     }
 
     &__preview {
+        margin: 0px auto 21px auto ;
         display: block;
-        margin: 43px auto 30px auto;
+        width: 90%;
 
     }
 
     &__decription {
-        padding: 0px 30px 0px 21px;
+        
         height: 126px;
         margin: 0px 0px 26px 0px;
     
@@ -39,7 +44,7 @@
         display: flex;
         justify-content:space-between;
         align-items: center;
-        padding: 0px 30px 32px 21px;
+        
     }
     &__info-btn {
         border-radius: 50%;

@@ -1,41 +1,31 @@
 
-import { useSelector} from 'react-redux'
-import {useNavigate, Link, useParams} from 'react-router-dom'
+
+import {useNavigate, useParams} from 'react-router-dom'
 import './singleProductPage.scss'
 import ProductItem from '../components/elements/ProductItem'
 import {products} from '../products'
+import CartCounter from '../components/elements/CartCounter'
+import Header from '../components/elements/Header'
 
 function SingleProductPage() {
   
   const navigate = useNavigate ()
-  const cart = useSelector((state) => state.cart.cart)
-  const getTotal = () => {
-    let totalQuantity = 0
-    let totalPrice = 0
-    cart.forEach(item => {
-      totalQuantity += item.quantity
-      totalPrice += item.price * item.quantity
-    })
-    return {totalPrice, totalQuantity}
-  }
+
+
   const params = useParams () 
   const id = params.id
   let item = products.find((item)=>item.id === id)
   
     return (
-      <main className="product">
+      <div className="productPage">
         <div className="container">
-          <header className='product__header header'> 
-            <img onClick = {()=>navigate(-1)} src='images/arrow.svg' alt=''/>
-            <div className="header__basket basket-header">
-              <p className="basket-header__desc"><span>{getTotal().totalQuantity} товара</span><br/>на сумму {getTotal().totalPrice}  </p> 
-              <Link to='/Cart'>
-                <img src='images/header-basket.svg' alt=''></img>
-            </Link>
-            </div>
-          </header>
-          <div className="product__body">
-            <ProductItem
+          <Header/>
+          <button className='transp-rect-button'>Выйти</button>
+          <button onClick = {()=>navigate(-1)}className='back-arrow-btn'>&#8592;</button>
+          <CartCounter/>
+          
+        <div className="productPage__item"> 
+          <ProductItem
               id={item.id}
               key={item.id}
               img={item.img}
@@ -43,10 +33,10 @@ function SingleProductPage() {
               description={item.description}
               price={item.price}
               weight={item.weight}
-            />
-          </div>
+          />
+       </div>  
         </div>
-      </main>
+      </div>
     );
   }
   

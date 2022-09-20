@@ -1,14 +1,13 @@
-.product {
-    background-color: #161516;
-    color: #FFFFFF;
-    font-family: 'Montserrat';
-    &__header {
+.productPage {
+    
+    background: url("../../public/images/background.png") no-repeat;
+    background-size: 100%;
 
+    &__item {
+        height: calc(100vh - 173px);
     }
-    &__body {
-        height: calc(100vh - 100px);
-        
-
-    }
-
+    
+    
+   
+ 
 }

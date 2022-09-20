@@ -1,0 +1,20 @@
+
+
+
+.cart-counter {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    right: 292px;
+    &__text {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        display: inline-block;
+        text-align: right;
+        margin: 0px 20px 0px 0px;
+        }
+    }

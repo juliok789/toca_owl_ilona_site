@@ -3,10 +3,8 @@
     align-items: center;
     display: flex;
     vertical-align: middle;
+    justify-content: space-between;
     margin: 0px 0px 35px 0px;
-    
-    
-
     &__preview {
         display: block;
         
@@ -17,12 +15,9 @@
         font-size: 17px;
         line-height: 21px;
         width: 310px;
-        margin: 0px 200px 0px 88px;
         
-
+     
     }
-
-
 
     &__price {
         font-weight: 500;
@@ -34,7 +29,7 @@
             content: '\20BD';
         }
     }
-    &__btn {
+    &__remove {
         border-radius: 50%;
         background-color: transparent;
         border: 1px solid #D58C51;
@@ -43,6 +38,27 @@
         height: 30px;
         font-size: 25px;
         transform: rotate(45deg);
+    }
+    &__incrDec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__dec {
+        background-color: transparent;
+        border:none;
+        color: #fff;
+        font-size: 25px;
+        margin: 0px 15px 0px 0px;
+
+
+    }
+    &__incr {
+        background-color: transparent;
+        border:none;
+        color: #fff;
+        font-size: 25px;
+        margin: 0px 0px 0px 15px;
     }
   
     

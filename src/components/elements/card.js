@@ -4,7 +4,6 @@ import {useDispatch} from 'react-redux'
 import {addToCart} from '../../store/reducers/CartSlice'
 import { useNavigate } from 'react-router-dom'
 
-
 function Card ({id,img,title, description, price, weight}) {
     const dispatch = useDispatch()
     const navigate = useNavigate ()

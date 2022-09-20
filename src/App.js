@@ -2,6 +2,7 @@
 import Products from './Pages/Products'
 import Cart from './Pages/Cart'
 import SingleProductPage from './Pages/SingleProductPage'
+import './components/ui/buttons.scss'
 
 
 import { Routes, Route} from 'react-router-dom'

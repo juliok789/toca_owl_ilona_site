@@ -3,6 +3,7 @@ import { useDispatch} from 'react-redux'
 import {addToCart} from '../../store/reducers/CartSlice'
 
 
+
 function ProductItem ({id,img,title,description,price,weight}) {
     const dispatch = useDispatch ()
     return (
@@ -17,7 +18,7 @@ function ProductItem ({id,img,title,description,price,weight}) {
                     <button onClick={() => 
                     dispatch (addToCart({
                     id, title,description, img, price, weight
-                    }))} className="item__btn">В корзину</button>
+                    }))} className="item__cart-btn orange-rect-button">В корзину</button>
                 </div>
             </div>
         </div>

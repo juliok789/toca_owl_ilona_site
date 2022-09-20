@@ -1,0 +1,37 @@
+.orange-rect-button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    background: #D58C51;
+    height: 42px;
+    width: 200px;
+}
+
+.transp-rect-button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D58C51;
+    background: transparent;
+    height: 42px;
+    width: 200px;
+    border: 1px solid #D58C51;
+    position: absolute;
+    top: 56px;
+    right: 70px;
+
+}
+
+.back-arrow-btn {
+
+    background: transparent;
+    border: 1px solid #d58c51;
+    border-radius: 50%;
+    height: 31px;
+    width: 31px;
+    position: absolute;
+    top: 56px;
+    left: 50px;
+    color: #d58c51;
+}
