@@ -20,11 +20,10 @@ function SingleProductPage() {
       <div className="productPage">
         <div className="container">
           <Header/>
-          <button className='transp-rect-button'>Выйти</button>
           <button onClick = {()=>navigate(-1)}className='back-arrow-btn'>&#8592;</button>
           <CartCounter/>
           
-        <div className="productPage__item"> 
+        <div productPage__item>
           <ProductItem
               id={item.id}
               key={item.id}
@@ -34,7 +33,7 @@ function SingleProductPage() {
               price={item.price}
               weight={item.weight}
           />
-       </div>  
+        </div> 
         </div>
       </div>
     );

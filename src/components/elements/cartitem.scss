@@ -5,8 +5,10 @@
     vertical-align: middle;
     justify-content: space-between;
     margin: 0px 0px 35px 0px;
+    cursor: pointer;
     &__preview {
         display: block;
+        margin: 0px 100px 0px 0px;
         
     }
 
@@ -16,7 +18,6 @@
         line-height: 21px;
         width: 310px;
         
-     
     }
 
     &__price {

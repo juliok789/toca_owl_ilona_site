@@ -13,9 +13,6 @@
     &__list {
         height: calc(100vh - 90px - 173px);
         overflow-x: auto;
-        flex-grow: 1;
-        row-gap: 35px;
-        column-gap: 9px;
         &::-webkit-scrollbar {
             display: none;
           }

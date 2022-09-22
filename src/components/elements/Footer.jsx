@@ -1,5 +1,6 @@
 import './footer.scss'
 import { useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
 function Footer () {
     const cart = useSelector((state) => state.cart.cart)
     const getTotal = () => {
@@ -20,7 +21,9 @@ function Footer () {
                     <p className="cart-total__text">Заказ на сумму:
                     <span className="cart-total__amount"> {getTotal().totalPrice}₽</span></p>
                 </div>
-                <button className="footer__btn orange-rect-button">Оформить заказ</button>
+                <Link to='/LoginPage'> 
+                  <button className="footer__btn orange-rect-button">Оформить заказ</button>
+                </Link>
           </div>
         </div>
       </footer>

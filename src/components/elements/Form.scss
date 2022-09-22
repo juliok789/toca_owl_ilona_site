@@ -1,0 +1,100 @@
+.form {
+    margin: auto;
+    background-color: #fff;
+    width: 460px;
+    padding: 10px 0px 34px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%; 
+    transform: translate(-50%, -50%);
+    
+
+
+    &__link {
+    
+        color:#D58C51;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: right;
+        text-decoration-line: underline;
+        margin: 9px 20px 0px 320px;
+    }
+    
+    &__title {
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 38px;
+        text-transform: uppercase;
+        color: #161516;
+        margin: 13px 0 36px 0;
+        text-align: center;
+    }
+    &__button {
+        display: block;
+        margin: 0px auto;
+        }
+}
+
+input {
+    display: block;
+    border: 1px solid #D58C51;
+    border-radius: 61px;
+    width: 420px;
+    height: 40px;
+    margin: 0px 20px 4px 20px;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #161516;
+        padding: 0px 0px 0px 18px;
+        
+       
+            
+        }
+}
+
+.radiobtn {
+    margin: 0px 0px 0px 20px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+    +label {
+        margin: 4px 0px 30px 20px;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        color: #301411;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+      }
+      +label::before {
+        cursor: pointer;
+        content: '';
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #D58C51;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+       
+        &:checked+label::before {
+            border-color: #D58C51;
+            background-color: #D58C51;
+        }
+            &:disabled+label::before {
+                background-color: #e9ecef;
+          }
+}

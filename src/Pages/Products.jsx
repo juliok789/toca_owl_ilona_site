@@ -4,13 +4,14 @@ import {products} from '../products'
 import Header from '../components/elements/Header';
 import CartCounter from '../components/elements/CartCounter'
 
+
 function Products () {
   
   return (
     <main className="products">
       <div className="container">
         
-        <button className='transp-rect-button'>Выйти</button>
+        
         <Header
           Title= {'наша продукция'}/>
         <CartCounter/>
