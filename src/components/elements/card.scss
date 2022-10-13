@@ -10,6 +10,16 @@
     &:hover{
         color: #D58C51;
     }
+    @media screen and (max-width: 1180px) {
+        width: 19%;
+    }
+    @media screen and (max-width: 992px) {
+        width: 42%
+    }
+    @media screen and (max-width: 768px) {
+        width: 70%;
+        margin: 0px auto;
+    }
 
     &__preview {
         margin: 0px auto 21px auto ;

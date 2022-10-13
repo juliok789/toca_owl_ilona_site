@@ -12,9 +12,9 @@ function Products () {
       <div className="container">
         
         
-        <Header
-          Title= {'наша продукция'}/>
+        <Header Title= {'наша продукция'}>
         <CartCounter/>
+        </Header>
         <div className="products-list">
           
           {products.map(item => (

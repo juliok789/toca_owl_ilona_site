@@ -19,9 +19,11 @@ function SingleProductPage() {
     return (
       <div className="productPage">
         <div className="container">
-          <Header/>
+          <Header>
+            <CartCounter/>
+          </Header>
           <button onClick = {()=>navigate(-1)}className='back-arrow-btn'>&#8592;</button>
-          <CartCounter/>
+          
           
         <div productPage__item>
           <ProductItem

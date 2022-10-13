@@ -3,12 +3,16 @@ import LogOutBtn from '../ui/LogOutBtn';
 
 
 
-function Header ({Title, backbtn}) { 
+function Header ({Title, children}) { 
     return (
         <header className='header'>
           
           <h1 className="header__title">{Title}</h1>
-          <LogOutBtn/>
+          <div className='header__wrap'>
+            {children}
+            <LogOutBtn/>
+            
+          </div>
         </header>
     )}
 

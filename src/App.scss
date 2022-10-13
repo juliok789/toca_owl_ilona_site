@@ -7,11 +7,17 @@ body {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 95vw;
     margin: 0px auto;
+   
   }
 .cart-container {
     max-width: 1000px;
     margin: 0px auto;
+    @media screen and (max-width: 1180px){
+        max-width: 90vw;
+
+    }
+    
     
 }
