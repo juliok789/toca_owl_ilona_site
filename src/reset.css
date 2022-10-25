@@ -475,9 +475,7 @@ button {
     border: none;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 input {
     border: none;
@@ -486,7 +484,4 @@ input {
 textarea {
     border: none;
     
-}
-a {
-    color: #fff;
 }

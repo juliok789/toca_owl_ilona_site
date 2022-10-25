@@ -1,0 +1,26 @@
+.SingleRulePage {
+    height: 100vh;
+    background: url(../../public/images/tocabg.jpg) 0 0/cover  no-repeat;
+    text-align: center;
+    cursor: pointer;
+    &__title {
+        font-size: 35px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0px 0px 10vh 0px;
+        &:hover {
+            color: rgb(254,161, 250);}
+    }
+    &__description {
+        font-size: 25px;
+        font-weight: 400;
+        margin: 0px auto;
+        line-height: 40px;
+        width: 40vw;
+        color: rgba(0, 0, 0, 0.557);
+        height: calc(80vh - 100px - 90px);
+        &:hover {
+            color: rgb(254,161, 250);}
+    
+    }
+}

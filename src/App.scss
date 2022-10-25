@@ -1,23 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900');
 
 body {
-    background-color: #161516;
-    color: #FFFFFF;
     font-family: 'Montserrat';
 }
 
 .container {
-    max-width: 95vw;
+    max-width: 90vw;
     margin: 0px auto;
    
   }
-.cart-container {
-    max-width: 1000px;
-    margin: 0px auto;
-    @media screen and (max-width: 1180px){
-        max-width: 90vw;
-
-    }
-    
-    
+  a {
+    text-decoration: none;
+    color: black;
 }
+    
+    
+

@@ -1,18 +1,24 @@
 import './header.scss'
-import LogOutBtn from '../ui/LogOutBtn';
+import {Link} from 'react-router-dom'
 
 
 
-function Header ({Title, children}) { 
+
+
+function Header ({children}) { 
     return (
         <header className='header'>
           
-          <h1 className="header__title">{Title}</h1>
-          <div className='header__wrap'>
-            {children}
-            <LogOutBtn/>
+          {children}
+          <nav className='header__nav'>
             
-          </div>
+            <Link to='/'>
+              <li className='header__nav-link'>Главная</li>
+            </Link>
+            <Link to='/Rules'>
+              <li className='header__nav-link'>Правила</li>
+            </Link>
+          </nav>
         </header>
     )}
 
