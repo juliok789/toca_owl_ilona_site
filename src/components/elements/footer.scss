@@ -1,13 +1,15 @@
 .footer {
-    height: 90px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     
     &__text {
         font-size: 15px;
         font-weight: 400;
         line-height: 20px;
         color: rgb(128, 35, 124);
-        display: flex;
-        justify-content: right;
+       
         
     }
 

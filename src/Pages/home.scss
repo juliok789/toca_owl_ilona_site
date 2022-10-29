@@ -1,6 +1,6 @@
 .homePage {
-    height: 100vh;
     background: url(../../public/images/tocabg.jpg) 0 0/cover  no-repeat;
+    height: 100vh;
     &__title {
         font-weight: 700;
         font-size: 70px;
@@ -12,6 +12,9 @@
         transform: translate(-50%, -50%);
         &:hover {
             color: rgb(170, 254, 255);
+        }
+        @media screen and (max-width: 800px){ 
+            font-size: 50px;
         }
     }
     &__content {

@@ -10,6 +10,9 @@
         margin: 0px 0px 10vh 0px;
         &:hover {
             color: rgb(254,161, 250);}
+        @media screen and (max-width: 800px){ 
+            font-size: 25px;
+            }
     }
     &__description {
         font-size: 25px;
@@ -21,6 +24,8 @@
         height: calc(80vh - 100px - 90px);
         &:hover {
             color: rgb(254,161, 250);}
-    
+        @media screen and (max-width: 800px){ 
+            font-size: 15px;
+            }
     }
 }

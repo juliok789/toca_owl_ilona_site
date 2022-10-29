@@ -2,28 +2,11 @@
     height: 100px;
     color: black;
     padding: 5vh 0px 0px 0px;
-    display: flex;
     align-items: center;
+    display: flex;
     
-    &__nav{
-        display: flex;
-        column-gap: 15vw;
-        margin: 0px 0px 0px 25%;
-        @media screen and (max-widht: 1180px) {
-            column-gap: 10vw;}
-    }
-    &__nav-link{
-        color: black;
-        font-size: 30px;
-        text-transform: uppercase;
-        list-style-type: none;
-        &:hover {
-            color: rgb(169, 255, 171);
-            font-weight: 700;}
-            @media screen and (max-widht: 1180px) {
-                font-size: 20px;}
+ 
             
         }
         
     
-}

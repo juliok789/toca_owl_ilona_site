@@ -1,5 +1,5 @@
 import './header.scss'
-import {Link} from 'react-router-dom'
+import BurgerMenu from './BurgerMenu'
 
 
 
@@ -8,18 +8,14 @@ import {Link} from 'react-router-dom'
 function Header ({children}) { 
     return (
         <header className='header'>
-          
+          <div className="header__children">
           {children}
-          <nav className='header__nav'>
-            
-            <Link to='/'>
-              <li className='header__nav-link'>Главная</li>
-            </Link>
-            <Link to='/Rules'>
-              <li className='header__nav-link'>Правила</li>
-            </Link>
-          </nav>
+          </div>
+          <div className="header__burger">
+          <BurgerMenu/>
+          </div>
         </header>
     )}
 
 export default Header
+

@@ -16,6 +16,7 @@ function Home () {
           whileHover={{
             scale: 1.5,
             transition: { duration: 1 },
+            color: "#000"
           }}
           whileTap={{ scale: 0.9 }}
           
